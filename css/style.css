@@ -1,0 +1,463 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  box-sizing: border-box;
+  color: inherit;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  line-height: 1;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+address,
+em,
+i {
+  font-style: normal;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body,
+input,
+button {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  letter-spacing: -0.0025em;
+  word-break: keep-all;
+}
+
+.inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.inner {
+  max-width: 1440px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #333;
+}
+
+.title {
+  text-align: right;
+  margin: 0 0 32px 0;
+}
+.title h3 {
+  position: relative;
+  font-size: 48px;
+  font-weight: 700;
+  text-indent: -2px;
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+  font-family: "Playfair Display SC";
+}
+.title p {
+  font-size: 20px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0 30px;
+  transition: 0.5s;
+}
+.header .head_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .head_top .user_search form > * {
+  outline: none;
+  border: none;
+  background: none;
+}
+.header .head_top .user_search form button {
+  background: #94BFFF;
+  border-radius: 0 0 4px 4px;
+  padding: 8px;
+  margin: 0 8px 0 0;
+  cursor: pointer;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+.header .head_top .user_search form button span {
+  font-size: 24px;
+  vertical-align: middle;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.header .head_top .user_search form input[type=text] {
+  padding: 4px 8px;
+  width: 270px;
+  border-bottom: 2px solid #94BFFF;
+  color: #fff;
+  transition: 0.5s;
+}
+.header .head_top .user_search form input[type=text]:focus {
+  color: #000;
+  border-bottom: 2px solid #fff;
+}
+.header .head_top .user_search form input[type=text]::-moz-placeholder {
+  color: #f7f8f9;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.header .head_top .user_search form input[type=text]::placeholder {
+  color: #f7f8f9;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.header .head_top .user_area {
+  display: flex;
+  gap: 8px;
+}
+.header .head_top .user_area li {
+  cursor: pointer;
+}
+.header .head_top .user_area li a {
+  display: block;
+  line-height: 24px;
+}
+.header .head_top .user_area span {
+  padding: 8px;
+  color: #fff;
+  background: #94BFFF;
+  border-radius: 0 0 4px 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+.header .head_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .head_wrap h1 img {
+  width: 200px;
+}
+.header .gnb ul {
+  display: flex;
+  gap: 40px;
+}
+.header .gnb ul li a {
+  display: block;
+  line-height: 80px;
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+}
+.header .gnb .sub {
+  display: none;
+}
+.header.on {
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+.header.on .head_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header.on .head_top .user_search form input[type=text] {
+  color: #222;
+}
+.header.on .head_top .user_search form input[type=text]:focus {
+  color: #000;
+  border-bottom: 2px solid #94BFFF;
+}
+.header.on .head_top .user_search form input[type=text]::-moz-placeholder {
+  color: #999;
+}
+.header.on .head_top .user_search form input[type=text]::placeholder {
+  color: #999;
+}
+.header.on .head_wrap h1 img {
+  filter: invert(1);
+}
+.header.on .gnb ul li a {
+  color: #94BFFF;
+}
+
+.main_visual .itm {
+  position: relative;
+  height: 100vh;
+  filter: grayscale(0.3);
+}
+.main_visual .itm.itm01 {
+  background: url(../images/mainVisual01.png) 0% center/cover;
+}
+.main_visual .itm.itm02 {
+  background: url(../images/mainVisual02.jpg) no-repeat center center/cover;
+}
+.main_visual .itm.itm03 {
+  background: url(../images/mainVisual03.jpg) 20% center/cover;
+}
+.main_visual .itm.itm04 {
+  background: url(../images/mainVisual04.jpg) left center/cover;
+}
+.main_visual .itm::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  z-index: -2;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.main_visual .itm::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 500px;
+  background: #b7cce7;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+}
+.main_visual .slogan {
+  position: absolute;
+  bottom: calc(50% - 50px);
+  left: 280px;
+  transform: translate(0, 50%);
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 550px;
+  background: #fff;
+  padding: 50px;
+  border-radius: 50px 0;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.main_visual .slogan h3 {
+  font-size: 48px;
+  font-weight: 700;
+  text-indent: -2px;
+  text-transform: uppercase;
+  margin: 0 0 24px 0;
+  color: #94BFFF;
+  font-family: "Playfair Display SC";
+}
+.main_visual .slogan p {
+  margin: 0 0 auto 0;
+}
+.main_visual .slogan a {
+  display: block;
+  padding: 10px 25px 8px 25px;
+  border: 1px solid #b7cce7;
+  border-radius: 8px;
+  color: #b7cce7;
+  text-align: center;
+}
+.main_visual .mv_arrow {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  z-index: 900;
+  margin: 0 0 0 800px;
+}
+.main_visual .mv_arrow li {
+  cursor: pointer;
+}
+.main_visual .mv_arrow li span {
+  display: block;
+  font-size: 32px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.main_visual .mv_arrow li.right span {
+  border-top: none;
+}
+.main_visual .slick-dots {
+  position: absolute;
+  bottom: calc(50% + 120px);
+  left: 250px;
+  transform: translate(0, 50%);
+}
+.main_visual .slick-dots button {
+  outline: none;
+  border: none;
+  font-size: 0;
+  background: #f7f8f9;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+.main_visual .slick-dots > li:not(:last-child) {
+  margin: 0 0 2px 0;
+}
+.main_visual .slick-dots .slick-active button {
+  background: #94BFFF;
+}
+
+.footer {
+  padding: 50px 0;
+  background: #222;
+}/*# sourceMappingURL=style.css.map */
