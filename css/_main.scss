@@ -1,3 +1,7 @@
+body {
+    counter-reset: worknum;
+}
+
 .main_visual {
     .itm {
         position: relative;
@@ -26,7 +30,7 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 300px;
+            height: 250px;
             z-index: -2;
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
         }
@@ -47,7 +51,7 @@
     .slogan {
         position: absolute;
         bottom: calc(50% - 50px);
-        left: 280px;
+        left: 250px;
         transform: translate(0, 50%);
 
         display: flex;
@@ -115,7 +119,7 @@
     .slick-dots {
         position: absolute;
         bottom: calc(50% + 120px);
-        left: 250px;
+        left: 220px;
         transform: translate(0, 50%);
 
         button {
@@ -140,4 +144,312 @@
     }
 }
 
-.main_towork {}
+.main_towork {
+    position: relative;
+    padding: 150px 0;
+    background: linear-gradient(transparent 75%, $c-main 75%);
+
+    .title {
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 100%;
+        z-index: -11;
+        color: $c-main;
+    }
+
+    .workcard {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+
+        li {
+            padding: 40px 40px 60px 40px;
+            border: 2px solid $c-sub;
+            border-radius: 30px 0;
+            background: $c-w;
+
+            box-shadow: 10px 10px 0 rgba($color: $c-sub, $alpha: 1.0);
+            transition: 0.5s;
+
+            strong {
+                display: block;
+                font-size: 40px;
+                font-weight: 700;
+                font-family: 'Playfair Display SC';
+                margin: 0 0 24px 0;
+            }
+
+            p {
+                margin: 0 0 8px 0;
+            }
+
+            span {
+                display: block;
+                font-size: 14px;
+                line-height: 18px;
+            }
+
+            &:nth-child(1) {
+                grid-row: 1 / 3;
+            }
+
+            &:nth-child(2) {
+                grid-row: 2 / 4;
+            }
+
+            &:nth-child(3) {
+                grid-row: 1 / 3;
+            }
+
+            &:nth-child(4) {
+                grid-row: 2 / 4;
+            }
+
+
+            &::before {
+                counter-increment: worknum;
+                content: "0" counter(worknum);
+                display: block;
+                color: $c-sub;
+                font-size: 14px;
+                margin: 0 0 4px 0;
+            }
+
+
+            &:hover {
+                transform: translate(-3px, -10px);
+                box-shadow: 8px 8px 10px rgba($color: $c-b, $alpha: 0.1);
+            }
+        }
+    }
+}
+
+
+
+.main_collection {
+    position: relative;
+
+    .theme {
+        position: relative;
+        height: 100vh;
+
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 130px;
+            right: 0;
+            bottom: 50px;
+            z-index: 1;
+            width: 780px;
+            border-radius: 0 0 0 50px;
+            filter: brightness(110%);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 100px;
+            right: 530px;
+            z-index: 2;
+            width: 320px;
+            height: 500px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba($color: $c-b, $alpha: 0.1);
+            filter: brightness(110%);
+        }
+
+        &.th1 {
+            background: $c-sub-pink;
+
+            &::before {
+                background: url(../images/col_Jane1.jpg) no-repeat center center/cover;
+            }
+
+            &::after {
+                background: url(../images/col_Jane2.jpg) no-repeat center center/cover;
+            }
+        }
+
+        &.th2 {
+            background: $c-sub-green;
+
+            &::before {
+                background: url(../images/col_Taylor2.jpg) no-repeat 25% bottom/cover;
+            }
+
+            &::after {
+                background: url(../images/col_Taylor1.jpg) no-repeat center center/cover;
+            }
+        }
+
+        &.th3 {
+            background: $c-sub-purple;
+
+            &::before {
+                background: url(../images/col_Millie2.png) no-repeat center center/cover;
+            }
+
+            &::after {
+                background: url(../images/col_Millie1.jpg) no-repeat center center/cover;
+            }
+        }
+    }
+
+    .page_num {
+        position: absolute;
+        top: 130px;
+        left: 50px;
+        z-index: 900;
+
+        font-size: 160px;
+        font-weight: 900;
+        color: $c-w;
+        letter-spacing: -20px;
+        font-style: italic;
+        text-shadow: 0 0 8px rgba($color: $c-4, $alpha: 0.1);
+    }
+
+    .txt_box {
+        position: absolute;
+        top: calc(50% - 80px);
+        left: calc(50% - 325px);
+        transform: translate(-50%, -50%);
+        z-index: 900;
+        max-width: 650px;
+        text-align: right;
+
+        h3 {
+            font-size: 88px;
+            font-weight: 700;
+            line-height: 84px;
+            color: $c-w;
+            margin: 0 0 24px 0;
+            text-shadow: 0 0 8px rgba($color: $c-4, $alpha: 0.1);
+            font-family: 'Playfair Display SC';
+        }
+
+        p {
+            margin: 0 0 48px 0;
+        }
+
+        a {
+            position: relative;
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 700;
+            color: $c-w;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -22px;
+                right: -40px;
+                width: 700px;
+                height: 1px;
+                background: $c-w;
+                border-radius: 50%;
+                transition: 0.5s
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -16px;
+                right: -43px;
+                width: 25px;
+                height: 1px;
+                background: $c-w;
+                transform: rotate(30deg);
+                border-radius: 50%;
+
+                transition: 0.5s
+            }
+
+            &:hover {
+                &::before {
+
+                    transform: translate(24px, 0);
+                }
+
+                &::after {
+
+                    transform: translate(24px, 0) rotate(30deg);
+                }
+            }
+        }
+    }
+
+    .sub_collection {
+        position: absolute;
+
+        bottom: 70px;
+        left: 70px;
+        z-index: 900;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+        max-width: 640px;
+
+
+        figure {
+            transition: 0.5s;
+
+            .img_box {
+                border-radius: 8px;
+                overflow: hidden;
+                margin: 0 0 16px 0;
+
+                img {
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                }
+            }
+
+            figcaption {
+                color: $c-w;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 700;
+                padding: 0 10px;
+            }
+
+            &:hover {
+                transform: translate(0, -10px);
+            }
+        }
+
+    }
+
+    .collection_page {
+        position: absolute;
+        top: 300px;
+        left: 70px;
+        z-index: 1;
+        width: auto;
+
+        li {
+            width: 60%;
+            background: transparent;
+            margin: 30px 0;
+            opacity: 55%;
+
+            a {
+                font-size: 14px;
+                font-weight: 300;
+                color: $c-w;
+                letter-spacing: 2px;
+            }
+
+            &.on {
+                opacity: 100%;
+            }
+        }
+    }
+
+}

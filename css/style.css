@@ -191,13 +191,11 @@ p {
 }
 
 .title {
-  text-align: right;
-  margin: 0 0 32px 0;
+  text-align: center;
 }
 .title h3 {
   position: relative;
-  font-size: 48px;
-  font-weight: 700;
+  font-size: 240px;
   text-indent: -2px;
   text-transform: uppercase;
   margin: 0 0 8px 0;
@@ -213,7 +211,7 @@ p {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 0 30px;
+  padding: 0 50px;
   transition: 0.5s;
 }
 .header .head_top {
@@ -312,7 +310,7 @@ p {
   background: rgba(255, 255, 255, 0.8);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(148, 191, 255, 0.1);
 }
 .header.on .head_top {
   display: flex;
@@ -339,6 +337,10 @@ p {
   color: #94BFFF;
 }
 
+body {
+  counter-reset: worknum;
+}
+
 .main_visual .itm {
   position: relative;
   height: 100vh;
@@ -362,7 +364,7 @@ p {
   top: 0;
   left: 0;
   right: 0;
-  height: 300px;
+  height: 250px;
   z-index: -2;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
 }
@@ -381,7 +383,7 @@ p {
 .main_visual .slogan {
   position: absolute;
   bottom: calc(50% - 50px);
-  left: 280px;
+  left: 250px;
   transform: translate(0, 50%);
   display: flex;
   flex-direction: column;
@@ -438,7 +440,7 @@ p {
 .main_visual .slick-dots {
   position: absolute;
   bottom: calc(50% + 120px);
-  left: 250px;
+  left: 220px;
   transform: translate(0, 50%);
 }
 .main_visual .slick-dots button {
@@ -457,7 +459,317 @@ p {
   background: #94BFFF;
 }
 
+.main_towork {
+  position: relative;
+  padding: 150px 0;
+  background: linear-gradient(transparent 75%, #b7cce7 75%);
+}
+.main_towork .title {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  z-index: -11;
+  color: #b7cce7;
+}
+.main_towork .workcard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.main_towork .workcard li {
+  padding: 40px 40px 60px 40px;
+  border: 2px solid #94BFFF;
+  border-radius: 30px 0;
+  background: #fff;
+  box-shadow: 10px 10px 0 #94bfff;
+  transition: 0.5s;
+}
+.main_towork .workcard li strong {
+  display: block;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Playfair Display SC";
+  margin: 0 0 24px 0;
+}
+.main_towork .workcard li p {
+  margin: 0 0 8px 0;
+}
+.main_towork .workcard li span {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+}
+.main_towork .workcard li:nth-child(1) {
+  grid-row: 1/3;
+}
+.main_towork .workcard li:nth-child(2) {
+  grid-row: 2/4;
+}
+.main_towork .workcard li:nth-child(3) {
+  grid-row: 1/3;
+}
+.main_towork .workcard li:nth-child(4) {
+  grid-row: 2/4;
+}
+.main_towork .workcard li::before {
+  counter-increment: worknum;
+  content: "0" counter(worknum);
+  display: block;
+  color: #94BFFF;
+  font-size: 14px;
+  margin: 0 0 4px 0;
+}
+.main_towork .workcard li:hover {
+  transform: translate(-3px, -10px);
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main_collection {
+  position: relative;
+}
+.main_collection .theme {
+  position: relative;
+  height: 100vh;
+}
+.main_collection .theme::before {
+  content: "";
+  position: absolute;
+  top: 130px;
+  right: 0;
+  bottom: 50px;
+  z-index: 1;
+  width: 780px;
+  border-radius: 0 0 0 50px;
+  filter: brightness(110%);
+}
+.main_collection .theme::after {
+  content: "";
+  position: absolute;
+  bottom: 100px;
+  right: 530px;
+  z-index: 2;
+  width: 320px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  filter: brightness(110%);
+}
+.main_collection .theme.th1 {
+  background: #d6c5e0;
+}
+.main_collection .theme.th1::before {
+  background: url(../images/col_Jane1.jpg) no-repeat center center/cover;
+}
+.main_collection .theme.th1::after {
+  background: url(../images/col_Jane2.jpg) no-repeat center center/cover;
+}
+.main_collection .theme.th2 {
+  background: #9b996c;
+}
+.main_collection .theme.th2::before {
+  background: url(../images/col_Taylor2.jpg) no-repeat 25% bottom/cover;
+}
+.main_collection .theme.th2::after {
+  background: url(../images/col_Taylor1.jpg) no-repeat center center/cover;
+}
+.main_collection .theme.th3 {
+  background: #f8c0b2;
+}
+.main_collection .theme.th3::before {
+  background: url(../images/col_Millie2.png) no-repeat center center/cover;
+}
+.main_collection .theme.th3::after {
+  background: url(../images/col_Millie1.jpg) no-repeat center center/cover;
+}
+.main_collection .page_num {
+  position: absolute;
+  top: 130px;
+  left: 50px;
+  z-index: 900;
+  font-size: 160px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -20px;
+  font-style: italic;
+  text-shadow: 0 0 8px rgba(68, 68, 68, 0.1);
+}
+.main_collection .txt_box {
+  position: absolute;
+  top: calc(50% - 80px);
+  left: calc(50% - 325px);
+  transform: translate(-50%, -50%);
+  z-index: 900;
+  max-width: 650px;
+  text-align: right;
+}
+.main_collection .txt_box h3 {
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 84px;
+  color: #fff;
+  margin: 0 0 24px 0;
+  text-shadow: 0 0 8px rgba(68, 68, 68, 0.1);
+  font-family: "Playfair Display SC";
+}
+.main_collection .txt_box p {
+  margin: 0 0 48px 0;
+}
+.main_collection .txt_box a {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+.main_collection .txt_box a::before {
+  content: "";
+  position: absolute;
+  bottom: -22px;
+  right: -40px;
+  width: 700px;
+  height: 1px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.main_collection .txt_box a::after {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  right: -43px;
+  width: 25px;
+  height: 1px;
+  background: #fff;
+  transform: rotate(30deg);
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.main_collection .txt_box a:hover::before {
+  transform: translate(24px, 0);
+}
+.main_collection .txt_box a:hover::after {
+  transform: translate(24px, 0) rotate(30deg);
+}
+.main_collection .sub_collection {
+  position: absolute;
+  bottom: 70px;
+  left: 70px;
+  z-index: 900;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 640px;
+}
+.main_collection .sub_collection figure {
+  transition: 0.5s;
+}
+.main_collection .sub_collection figure .img_box {
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 0 16px 0;
+}
+.main_collection .sub_collection figure .img_box img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main_collection .sub_collection figure figcaption {
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0 10px;
+}
+.main_collection .sub_collection figure:hover {
+  transform: translate(0, -10px);
+}
+.main_collection .collection_page {
+  position: absolute;
+  top: 300px;
+  left: 70px;
+  z-index: 1;
+  width: auto;
+}
+.main_collection .collection_page li {
+  width: 60%;
+  background: transparent;
+  margin: 30px 0;
+  opacity: 55%;
+}
+.main_collection .collection_page li a {
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 2px;
+}
+.main_collection .collection_page li.on {
+  opacity: 100%;
+}
+
 .footer {
-  padding: 50px 0;
+  padding: 100px 0;
   background: #222;
+}
+.footer .ft {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 72px 0;
+}
+.footer .ft .foot_customer {
+  display: flex;
+  gap: 30px;
+}
+.footer .ft .foot_customer li a {
+  display: block;
+  font-size: 18px;
+  font-weight: 300;
+  color: #f7f8f9;
+}
+.footer .ft .foot_customer li a.strong {
+  color: #94BFFF;
+  font-weight: 700;
+}
+.footer .ft .foot_sns {
+  display: flex;
+  gap: 10px;
+}
+.footer .ft .foot_sns i {
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+.footer .ft::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #666;
+  opacity: 50%;
+}
+.footer .foot_address {
+  color: #ddd;
+}
+.footer .foot_address li {
+  line-height: 24px;
+}
+.footer .foot_address li a {
+  display: inline-block;
+  color: #94BFFF;
+}
+.footer .foot_address li.copy {
+  font-size: 14px;
+  color: #999;
 }/*# sourceMappingURL=style.css.map */

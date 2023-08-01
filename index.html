@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLOOMS</title>
 
-    <link rel="stylesheet" href="./css/style.css?ver=1.0">
     <link rel="stylesheet" href="./css/jquery.fullpage.min.css">
     <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/style.css?ver=1.1">
 
     <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="./js/jquery.fullpage.min.js"></script>
     <script src="./js/scrolloverflow.min.js"></script>
     <script src="./js/slick.min.js"></script>
-    <script src="./js/custom.js"></script>
+    <script src="./js/custom.js?ver=1.0"></script>
 </head>
 
 <body>
@@ -50,7 +50,7 @@
             </div>
             <div class="head_wrap">
                 <h1>
-                    <a href="/">
+                    <a href="#main">
                         <img src="./images/logo.png" alt="something borrowed BLOOMS">
                     </a>
                 </h1>
@@ -138,35 +138,262 @@
                 </ul>
             </section>
 
-            <!-- 02 main How to work -->
-            <section class="main_towork section">
+            <!-- 02 How to work -->
+            <section class="main_towork section fp-auto-height">
+                <h2 class="blind">Bloom에서 주문 후 처리과정</h2>
                 <div class="inner">
+                    <div class="title">
+                        <h3>HOW IT WORKS</h3>
+                    </div>
                     <ul class="workcard">
                         <li>
-                            <span>01 (가상요소로 차후 치환)</span>
                             <strong>PICK</strong>
-                            <p>Pick blooms from your favorite collection or mix & match!</p>
+                            <p>Pick blooms from your favorite collection or mix & match!
+                            </p>
+                            <span>좋아하는 Bloom의 컬렉션에서 꽃을 선택하거나 믹스 앤 매치하세요!</span>
                         </li>
                         <li>
-                            <span>02</span>
                             <strong>PACK</strong>
-                            <p>Receive your carefully packaged blooms 3 days before your big day!</p>
+                            <p>Receive your carefully packaged blooms 3 days before your big day!
+                            </p>
+                            <span>3일 전에 정성스럽게 포장된 꽃을 받아보세요!</span>
                         </li>
                         <li>
-                            <span>03</span>
                             <strong>PARTY</strong>
-                            <p>Get Married! Enjoy your big day, stress free!</p>
+                            <p>Get Married! Enjoy your big day, stress free!
+                            </p>
+                            <span>중요한 날을 스트레스 없이 즐기세요!</span>
                         </li>
                         <li>
-                            <span>04</span>
                             <strong>BACK</strong>
-                            <p>Return the flowers in our pre-paid boxes.</p>
+                            <p>Return the flowers in our pre-paid boxes.
+                            </p>
+                            <span>선불 상자에 꽃을 반납하세요!</span>
                         </li>
                     </ul>
                 </div>
             </section>
-            <section class="main_bouquet section">3</section>
-            <section class="main_collection section">4</section>
+
+            <!-- 03 부케 리스트 -->
+            <section class="main_bouquet section ">
+                <div class="inner">
+                    <ul class="bouquet_slide">
+                        <li>
+                            <a href="">
+                                <div class="img_box">
+                                    <img src="./images/itm_Bouquets1.jpg" alt="">
+                                </div>
+                                <div class="desc">
+                                    <strong>Bianca Bridal Bouquet (Garden-cut)</strong>
+                                    <span>$75.00 </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="img_box">
+                                    <img src="./images/itm_Bouquets2.jpg" alt="">
+                                </div>
+                                <div class="desc">
+                                    <strong>Picture of Wren Bridal Bouquet (Garden-cut)</strong>
+                                    <span>$80.00</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="img_box">
+                                    <img src="./images/itm_Bouquets3.jpg" alt="">
+                                </div>
+                                <div class="desc">
+                                    <strong>Jane Bridal Bouquet (Round)</strong>
+                                    <span>$65.00</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="img_box">
+                                    <img src="./images/itm_Bouquets4.jpg" alt="">
+                                </div>
+                                <div class="desc">
+                                    <strong>Shelbie Bridal Bouquet (Garden-cut)</strong>
+                                    <span>$75.00</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="img_box">
+                                    <img src="./images/itm_Bouquets5.jpg" alt="">
+                                </div>
+                                <div class="desc">
+                                    <strong>Cameron Bridal Bouquet (Garden-cut)</strong>
+                                    <span>$75.00</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="img_box">
+                                    <img src="./images/itm_Bouquets6.jpg" alt="">
+                                </div>
+                                <div class="desc">
+                                    <strong>Eloise Bridal Bouquet</strong>
+                                    <span>$65.00</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 04 현재 인기있는 콜렉션 리스트 -->
+
+            <section class="main_collection section">
+                <div class="theme th1">
+                    <div class="page_num">01</div>
+                    <div class="txt_box">
+                        <h3>Jane COLLECTION</h3>
+                        <p>The Jane Collection is made up of lots of interesting greenery, with a variety of
+                            shapes and textures, including eucalyptus leaves, thistle, and string of pearl.
+                            The
+                            flowers are all white in color and feature roses and peonies. The design and
+                            style
+                            of this collection is really modern and natural, while the color palette keeps
+                            it
+                            timeless and classic. A true beauty!
+                        </p>
+                        <a href="">VIEW MORE</a>
+                    </div>
+                    <div class="sub_collection">
+                        <figure>
+                            <div class="img_box">
+                                <img src="./images/col_J01.jpg" alt="jane collection">
+                            </div>
+                            <figcaption>
+                                <strong>JANE GRAND CENTERPIECE</strong>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <div class="img_box">
+                                <img src="./images/col_J02.jpg" alt="jane collection">
+                            </div>
+                            <figcaption>
+                                <strong>JANE BRIDAL BOUQUET (HAND-TIED)</strong>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <div class="img_box">
+                                <img src="./images/col_J03.jpg" alt="jane collection">
+                            </div>
+                            <figcaption>
+                                <strong>JANE AISLE MARKER</strong>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <ul class="collection_page">
+                    <li class="on"><a href="#sec3-1">Jane</a></li>
+                    <li><a href="#sec3-2">Taylor</a></li>
+                    <li><a href="#sec3-3">Millie</a></li>
+                </ul>
+            </section>
+            <section class="main_collection section">
+                <div class="theme th2">
+                    <div class="page_num">02</div>
+                    <div class="txt_box">
+                        <h3>TAYLOR COLLECTION</h3>
+                        <p>The Taylor Collection is made up of gorgeous antique beige peonies, lavender
+                            scabiosa, and a variety of ivory colored roses. You'll find hints of lavender among
+                            the lush silver dollar eucalyptus and lambs ear greenery. This airy, romantic
+                            collection is perfect for the modern bride looking for on-trend, yet timeless
+                            wedding flowers.
+                        </p>
+                        <a href="">VIEW MORE</a>
+                    </div>
+                    <div class="sub_collection">
+                        <figure>
+                            <div class="img_box">
+                                <img src="./images/col_T01.jpg" alt="TAYLOR COLLECTION">
+                            </div>
+                            <figcaption>
+                                <strong>TAYLOR BRIDAL BOUQUET (HAND-TIED)</strong>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <div class="img_box">
+                                <img src="./images/col_T02.jpg" alt="TAYLOR COLLECTION">
+                            </div>
+                            <figcaption>
+                                <strong>TAYLOR GARLAND</strong>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <div class="img_box">
+                                <img src="./images/col_T03.jpg" alt="TAYLOR COLLECTION">
+                            </div>
+                            <figcaption>
+                                <strong>TAYLOR FLORAL COMB</strong>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <ul class="collection_page">
+                    <li><a href="#sec3-1">Jane</a></li>
+                    <li class="on"><a href="#sec3-2">Taylor</a></li>
+                    <li><a href="#sec3-3">Millie</a></li>
+                </ul>
+            </section>
+            <section class="main_collection section">
+                <div class="theme th3">
+                    <div class="page_num">03</div>
+                    <div class="txt_box">
+                        <h3>MILLIE COLLECTION</h3>
+                        <p>The Millie is a soft and simple hand-tied silk floral collection. Featuring a mix of
+                            garden florals accented with light greenery. The collection includes shades of light
+                            blue, periwinkle blue, and creamy whites. Butterfly hydrangeas, lilac, English
+                            roses, and delphinium are used to create this collection of English garden-inspired
+                            florals. A timeless and romantic collection, perfect for a backyard wedding or a
+                            ballroom affair.
+                        </p>
+                        <a href="">VIEW MORE</a>
+                    </div>
+                    <div class="sub_collection">
+                        <figure>
+                            <div class="img_box">
+                                <img src="./images/col_M01.jpg" alt="MILLIE BRIDAL BOUQUET (GARDEN-CUT)">
+                            </div>
+                            <figcaption>
+                                <strong>MILLIE BRIDAL BOUQUET (GARDEN-CUT)</strong>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <div class="img_box">
+                                <img src="./images/col_M02.jpg" alt="MILLIE CAKE CLUSTER">
+                            </div>
+                            <figcaption>
+                                <strong>MILLIE CAKE CLUSTER</strong>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <div class="img_box">
+                                <img src="./images/col_M03.jpg" alt="MILLIE LARGE CENTERPIECE">
+                            </div>
+                            <figcaption>
+                                <strong>MILLIE LARGE CENTERPIECE</strong>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <ul class="collection_page">
+                    <li><a href="#sec3-1">Jane</a></li>
+                    <li><a href="#sec3-2">Taylor</a></li>
+                    <li class="on"><a href="#sec3-3">Millie</a></li>
+                </ul>
+            </section>
+
+            <!-- footer -->
             <footer class="footer  section fp-auto-height">
                 <!-- footer_top -->
                 <div class="inner">
@@ -175,20 +402,30 @@
                             <li><a href="">Contact Us</a></li>
                             <li><a href="">Collections</a></li>
                             <li><a href="">Terms and Conditions</a></li>
-                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="" class="strong">Privacy Policy</a></li>
                             <li><a href="">Blog</a></li>
                         </ul>
                         <ul class="foot_sns">
-                            <li><a href="">인스타그램</a></li>
-                            <li><a href="">페이스북</a></li>
-                            <li><a href="">핀터레스트</a></li>
+                            <li><a href=""><i class="bi bi-instagram">
+                                        <span class="blind">인스타그램</span>
+                                    </i></a></li>
+                            <li><a href="">
+                                    <i class="bi bi-facebook">
+                                        <span class="blind">페이스북</span>
+                                    </i>
+                                </a></li>
+                            <li><a href="">
+                                    <i class="bi bi-pinterest">
+                                        <span class="blind">핀터레스트</span>
+                                    </i>
+                                </a></li>
                         </ul>
                     </div>
-                    <address>
+                    <address class="addr">
                         <ul class="foot_address">
-                            <li>tel.</li>
-                            <li>add.</li>
-                            <li class="copy">© SOMETHING BORROWED BLOOMS 2023. ALL RIGHTS RESERVED.</li>
+                            <li>Tel. <a href="tel:1.844.879.6222">1.844.879.6222</a></li>
+                            <li>Email. <a href="mainto:info@sbblooms.com"> info@sbblooms.com</a></li>
+                            <li class="copy">&copy; SOMETHING BORROWED BLOOMS 2023. ALL RIGHTS RESERVED.</li>
                         </ul>
                     </address>
                 </div>
