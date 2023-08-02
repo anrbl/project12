@@ -1,6 +1,6 @@
 $(function () {
     $('._fullpage').fullpage({
-        anchors: ['main', 'sec1', 'sec2', 'sec3-1', 'sec3-2', 'sec3-3', 'foot'],
+        anchors: ['main', 'sec1', 'sec2', 'sec3', 'foot'],
         scrollHorizontally: true,
         scrollOverflow: true,
         scrollingSpeed: 700,
@@ -10,7 +10,7 @@ $(function () {
                 $('.header').addClass('on')
             } else if (nidx == '3') {
                 $('.header').addClass('on')
-            } else if (nidx == '7') {
+            } else if (nidx == '5') {
                 $('.header').addClass('on')
             } else {
                 $('.header').removeClass('on')
@@ -31,10 +31,48 @@ $(function () {
     })
 
 
-    $('.bouquet_slide').slick({
+    $('.text_loop').slick({
         arrows: false,
-        slidesToShow: 3,
+        autoplay: true,
+        autoplaySpeed: 0,
+        slidesToShow: 1,
         slidesToScroll: 1,
+        speed: 15000,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        cssEase: 'linear'
     });
 
+    $('.bouquet_slide').on('init afterChange', function (e, idx, currentSlide) {
+        let current = $('.bouquet_slide .slick-current');
+        let next = $('.bouquet_slide .slick-current + .slick-slide + .slick-slide');
+
+        const er = $([current, next]);
+        console.log(er);
+
+
+        $('.bouquet_slide .itm').removeClass('on')
+        er.each(function () {
+            $(this).addClass('on')
+        })
+
+    });
+    $('.bouquet_slide').slick({
+        arrows: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+    });
+    $('.bou_arrow .left').on('click', function () {
+        $('.bouquet_slide').slick('slickPrev');
+    })
+    $('.bou_arrow .right').on('click', function () {
+        $('.bouquet_slide').slick('slickNext');
+    })
+
+    $('.collection_page li').on('click', function (e) {
+        e.preventDefault();
+        let idx = $(this).index();
+        $('.collection_page li').eq(idx).addClass('on').siblings().removeClass('on');
+        $('.collection .theme').eq(idx).addClass('on').siblings().removeClass('on');
+    })
 });

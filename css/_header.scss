@@ -21,7 +21,7 @@
                 }
 
                 button {
-                    background: $c-sub;
+                    background: $c-w;
                     border-radius: 0 0 4px 4px;
                     padding: 8px;
                     margin: 0 8px 0 0;
@@ -31,7 +31,7 @@
                     span {
                         font-size: 24px;
                         vertical-align: middle;
-                        color: $c-w;
+                        color: $c-sub;
                         user-select: none;
                     }
                 }
@@ -39,7 +39,7 @@
                 input[type="text"] {
                     padding: 4px 8px;
                     width: 270px;
-                    border-bottom: 2px solid $c-sub;
+                    border-bottom: 2px solid $c-line;
                     color: $c-w;
                     transition: 0.5s;
 
@@ -72,8 +72,8 @@
 
             span {
                 padding: 8px;
-                color: $c-w;
-                background: $c-sub;
+                color: $c-sub;
+                background: $c-w;
                 border-radius: 0 0 4px 4px;
                 user-select: none;
 
@@ -121,10 +121,9 @@
 
 
     &.on {
-        background: rgba($color: $c-w, $alpha: 0.8);
-        backdrop-filter: blur(10px);
-        // border-bottom: 1px solid $c-main;
-        box-shadow: 0 2px 10px rgba($color: $c-sub, $alpha: 0.1);
+        // background: rgba($color: $c-w, $alpha: 0.9);
+        // backdrop-filter: blur(10px);
+        // box-shadow: 0 2px 10px rgba($color: $c-sub, $alpha: 0.1);
 
         .head_top {
             display: flex;
@@ -135,6 +134,7 @@
                 form {
                     input[type="text"] {
                         color: $c-2;
+                        border-bottom: 2px solid $c-main;
 
                         &:focus {
                             color: $c-b;

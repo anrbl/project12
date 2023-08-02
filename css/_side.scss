@@ -1,0 +1,25 @@
+.side {
+    .scroll {
+        position: fixed;
+        bottom: 120px;
+        left: 35px;
+
+        span {
+            writing-mode: vertical-lr;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 12px;
+        }
+    }
+
+    .side_nav {
+        position: fixed;
+        top: 400px;
+        left: 35px;
+        transform: translate(0, -50%);
+
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
