@@ -14,11 +14,29 @@
             gap: 30px;
 
             li {
+                position: relative;
+
+                &:not(:first-child) {
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: -15px;
+                        transform: translate(0, -50%);
+                        width: 1px;
+                        height: 12px;
+                        border-radius: 50%;
+                        background: $c-6;
+                        opacity: 60%;
+                    }
+                }
+
                 a {
                     display: block;
                     font-size: 18px;
                     font-weight: 300;
                     color: $c-wb;
+                    white-space: nowrap;
 
                     &.strong {
                         color: $c-sub;
@@ -72,6 +90,36 @@
             &.copy {
                 font-size: 14px;
                 color: $c-9;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .footer {
+        padding: 70px 0 60px 0;
+
+        .ft {
+            flex-direction: column-reverse;
+            gap: 32px;
+            margin: 0 0 64px;
+
+            .foot_customer {
+                flex-direction: column;
+                text-align: center;
+                gap: 16px;
+
+                li {
+                    &:not(:first-child) {
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            &::after {
+                bottom: -32px;
             }
         }
     }
