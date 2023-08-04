@@ -16,10 +16,12 @@ $c-sub-pink: #d6c5e0;
 $c-sub-green: #9b996c;
 $c-sub-purple: #f8c0b2;
 
+$max : 1440px;
+
 
 //mixin
 @mixin inner () {
-    max-width: 1440px;
+    max-width: $max;
     padding: 0 15px;
     margin: 0 auto;
 }
