@@ -99,6 +99,10 @@
     .footer {
         padding: 70px 0 60px 0;
 
+        .inner {
+            padding: 0 24px;
+        }
+
         .ft {
             flex-direction: column-reverse;
             gap: 32px;

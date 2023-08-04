@@ -85,7 +85,7 @@ body {
             width: 788px;
 
             font-family: 'Playfair Display SC';
-            text-shadow: 0 0 5px rgba($color: $c-b, $alpha: 0.1);
+            text-shadow: 0 0 10px rgba($color: $c-b, $alpha: 0.2);
         }
 
         p {
@@ -250,6 +250,7 @@ body {
 
 @media (max-width:768px) {
     .main_visual {
+
         .main_slide {
             .itm {
 
@@ -295,12 +296,12 @@ body {
         }
 
         .slogan {
-            bottom: 60px;
+            bottom: 90px;
             left: 24px;
             right: 24px;
 
             .txt {
-                margin: 0 0 104px 0;
+                margin: 0 0 80px 0;
                 text-align: center;
             }
 
@@ -342,14 +343,14 @@ body {
         }
 
         .mv_arrow {
-            bottom: 70px;
+            bottom: 100px;
             right: 24px;
         }
 
         .mv_slidenum {
             top: auto;
             right: 50%;
-            bottom: 24px;
+            bottom: 40px;
             transform: translate(50%, 0);
 
 
@@ -1163,6 +1164,7 @@ body {
                 -webkit-line-clamp: 6;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
+                padding: 0 80px 0 0;
                 margin: 0 0 24px 0;
             }
 
