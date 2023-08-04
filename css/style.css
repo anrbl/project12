@@ -1300,6 +1300,7 @@ body {
   left: 300px;
   z-index: 990;
   width: auto;
+  height: 80px;
   display: flex;
   gap: 30px;
 }
