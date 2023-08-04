@@ -113,6 +113,16 @@ $(function () {
         spaceBetween: 0,
         speed: 700,
         mousewheel: true,
+        effect: "creative",
+        creativeEffect: {
+            prev: {
+                shadow: false,
+                translate: ["-20%", 0, -1],
+            },
+            next: {
+                translate: ["100%", 0, 0],
+            },
+        },
         pagination: {
             el: '.collection_page',
             clickable: true,
@@ -135,7 +145,7 @@ $(function () {
                 var idx = this.activeIndex;
                 if (idx == 0 || idx >= length - 1) $.fn.fullpage.setAllowScrolling(true);
             },
-        }
+        },
     });
 
 

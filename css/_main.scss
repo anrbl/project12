@@ -855,8 +855,23 @@ body {
 .main_collection {
     position: relative;
 
+    //swiper
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+    }
+
+
+    //요소
     .theme {
         position: relative;
+        z-index: 990;
         height: 100vh;
 
         &::before {
@@ -931,6 +946,7 @@ body {
         font-weight: 900;
         color: $c-w;
         letter-spacing: -20px;
+        text-indent: -8px;
         font-style: italic;
         text-shadow: 0 0 8px rgba($color: $c-4, $alpha: 0.1);
         user-select: none;
