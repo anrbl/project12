@@ -148,13 +148,12 @@ $(function () {
     $('.mobile_menu').on('click', function () {
         $(this).toggleClass('on');
         $('.gnb').toggleClass('on');
-        $('h1').toggleClass('on');
     });
     $(window).on('resize', function () {
         $('.mobile_menu').removeClass('on');
         $('.gnb').removeClass('on');
     });
-    $('.gnb').on('wheel', function (e) {
+    $('.gnb').on('wheel touchmove', function (e) {
         if ($(this).hasClass('on')) {
             e.preventDefault();
         }

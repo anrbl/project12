@@ -4,7 +4,6 @@ $c-w : #fff;
 $c-wb : #f7f8f9;
 $c-line : #f2f2f2;
 $c-g : #ddd;
-$c-gb : #e5e5e5;
 $c-9 : #999;
 $c-6 : #666;
 $c-4 : #444;
@@ -17,12 +16,10 @@ $c-sub-pink: #d6c5e0;
 $c-sub-green: #9b996c;
 $c-sub-purple: #f8c0b2;
 
-$max : 1440px;
-
 
 //mixin
 @mixin inner () {
-    max-width: $max;
+    max-width: 1440px;
     padding: 0 15px;
     margin: 0 auto;
 }
